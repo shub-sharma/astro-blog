@@ -11,6 +11,8 @@ import mdx from "@astrojs/mdx";
 
 import partytown from "@astrojs/partytown";
 
+import cloudflare from "@astrojs/cloudflare";
+
 export default defineConfig(
     {
       site: "https://example.com",
@@ -18,7 +20,9 @@ export default defineConfig(
 
       vite: {
         plugins: [tailwindcss()]
-      }
+      },
+
+      adapter: cloudflare()
     }
     // sitemap({
     //     filter: (page) => page !== "https://example.com/about",
